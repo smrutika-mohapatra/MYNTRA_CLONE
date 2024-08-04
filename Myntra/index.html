@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping for Women, Men, Kids Fashion &amp; Lifestyle - Myntra</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./assets/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <nav>
+        <article>
+            <div class="logo">
+                <img src="./assets/favicon.png" alt="">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="">MEN</a></li>
+                    <li><a href="">WOMEN</a></li>
+                    <li><a href="">KIDS</a></li>
+                    <li><a href="">HOME & LIVING</a></li>
+                    <li><a href="">BEAUTY</a></li>
+                    <li><a href="">STUDIO <sup style="color: rgb(252, 2, 52);">NEW</sup></a></li>
+                </ul>
+            </div>
+            <div class="searchBar">
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" placeholder="  Search for products and Brands">
+
+                </div>
+            </div>
+            <div class="icons">
+                <div>
+                    <i class="fa-regular fa-user"></i> <a href=""><br>Profile</a>
+                    <i class="fa-regular fa-heart"></i> <a href=""><br>Wishlist</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag"
+                        viewBox="0 0 16 16" style="margin-left: 0px;margin-top: -12px" ;>
+                        <path
+                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z" />
+                    </svg> <a href=""><br> Bag</a>
+                </div>
+
+        </article>
+    </nav>
+
+
+
+    <section class="sec">
+        <h1 style="text-align: center; text-shadow: 0px 3px 2px gray; margin-bottom: 20px; font-size: 50px;">SHOP BY CATAGORIES</h1>
+        
+        <div class="card">
+            <div class="part1">
+                <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/12/cfe797b2-64f7-430a-9604-4e7d67c0d41d1718181892426-Shop-By-Category_HP_02.jpg"
+                    alt="Avatar" style="width:100%"onclick="clicks()">
+
+            </div>
+            <div class="part2">
+                <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/12/b8939655-b352-4cd3-ae7e-edee6c40eb171718181892435-Shop-By-Category_HP_03.jpg"
+                    alt="Avatar" style="width:100%"onclick="clicks()">
+
+            </div>
+            <div class="part3">
+                <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/12/8b0b07c1-1adf-4ddd-9f17-7fbe70a00cb01718181892508-Shop-By-Category_HP_12.jpg"
+                    alt="Avatar" style="width:100%"onclick="clicks()">
+
+            </div>
+            <div class="part4">
+                <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/12/142274e6-08c9-4dc7-bf0d-b3254990d1461718181892553-Shop-By-Category_HP_17.jpg"
+                    alt="Avatar" style="width:100%"onclick="clicks()">
+
+            </div>
+            <div class="part5">
+                <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/6/12/fafaaeb2-1d13-43eb-be9c-7ada7b93e63b1718181892608-Shop-By-Category_HP_23.jpg"
+                    alt="Avatar" style="width:100%" onclick="clicks()">
+            </div>
+
+        </div>
+    </section>
+
+    </div>
+
+    <script>
+        let img=document.querySelectorAll("img")
+        img.forEach((img)=>{
+            img.addEventListener("mouseover",()=>{
+                img.style.transform="scale(1.1)"
+            })
+            img.addEventListener("mouseout",()=>{
+                img.style.transform="scale(1)"
+            })
+           
+        })
+        function clicks() {
+            event.preventDefault()
+            window.location.assign("./catagories.html")
+        }
+    </script>
+</body>
+
+</html>

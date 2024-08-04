@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    height: 80px;
+    width: 100%;
+    box-shadow: 0px 2px 2px gainsboro;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top:0px;
+    background-color: white;
+}
+nav>article{
+    height: 100%;
+    width: 95%;
+    /* background-color: red; */
+    display: flex;
+    /* position: sticky; */
+}
+nav>article>.logo{
+    height: 100%;
+    width: 10%;
+    /* background-color: aqua; */
+}
+nav>article>.logo>img{
+    margin-top: 10px;
+    /* position: sticky; */
+}
+nav>article>.menu{
+    height: 100%;
+    width: 35%;
+    /* background-color: green; */
+}
+nav>article>.menu>ul{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: space-between;
+}
+nav>article>.menu>ul>li>a{
+    text-decoration: none;
+    color: rgb(31, 28, 28);
+    font-size: 13px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+nav>article>.searchBar{
+    height: 100%;
+    width: 35%;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    justify-content: end;
+    
+     
+}
+nav>article>.searchBar>.search{
+    height: 40px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    border: 1px solid gainsboro;
+    padding-left: 10px;
+    background-color: rgb(245, 244, 244);
+    border-radius: 5px;
+   
+    
+}
+nav>article>.searchBar>.search>i{
+    color: gray;
+    padding-right: 10px;
+}
+nav>article>.searchBar>.search>input{
+    height: 100%;
+    width: 90%;
+    border: none;
+    background-color: transparent;
+    
+}
+nav>article>.searchBar>.search>input:focus{
+    outline: none;
+}
+nav>article>.icons{
+    height: 100%;
+    width: 20%;
+    
+}
+nav>article>.icons>div{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+   
+
+}
+nav>article>.icons>div>i{
+   
+    margin-top: -15px;
+}
+nav>article>.icons>div>a{
+    text-decoration: none;
+    margin-top: 5px;
+    margin-left: -90px;
+    color: rgb(31, 28, 28);
+   font-weight: bold;
+   font-size: 13px;
+   font-family: Arial, Helvetica, sans-serif;
+
+}
+nav>article>.icons>div>svg{
+    text-align: center;
+}
+
+
+.sec{
+    height: 80vh;
+    width: 100%;
+   display: flex;
+    justify-content: center;
+    flex-direction: column;
+ 
+}
+.sec>.card{
+    height: 75%;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 3px 4px 10px  rgba(0,0,0,0.2);
+}
+

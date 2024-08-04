@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            height: 50px;
+            width: 250px;
+            border-radius: 5px;
+            border: 1px solid pink;
+            margin-top: 30px;
+            font-size: 15px;
+            font-weight: 600;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+<h1 style="font-size: 20px; color: rgb(241, 78, 110); font-weight: bold;"></h1>
+
+    
+    <script>
+        function getIdURL() {
+            let query = window.location.search
+            let obj = new URLSearchParams(query)
+            let idValue = obj.get("id")
+            return idValue
+        }
+        let id = getIdURL()
+
+
+        function fetchData() {
+            fetch(`https://fakestoreapi.com/products/${id}`)
+            .then((data)=>data.json())
+            .then((products)=>{
+                let article=document.createElement("article")
+                let div1=document.createElement("div")
+                let img=document.createElement("img")
+                let img1=document.createElement("img")
+                let div2=document.createElement("div")
+                let desc=document.createElement("p")
+                let h1=document.createElement("h1")
+                let h2=document.createElement("h2")                
+                let price=document.createElement("h1")
+                let p=document.createElement("p")
+                let size=document.createElement("div")
+                let d1=document.createElement("button")
+                let d2=document.createElement("button")
+                let d3=document.createElement("button")
+                let d4=document.createElement("button")
+                let d5=document.createElement("button")
+
+
+                let Wishbtn=document.createElement("button")
+                let Cartbtn=document.createElement("button")
+
+                img.src=products.image
+                img1.src=products.image
+                desc.innerText=products.description
+                h2.innerText=`${products.rating.rate} ⭐`
+                h1.innerText=products.title
+                price.innerText=`Price: $ ${products.price} `
+                p.innerHTML=`<p style="font-size: 20px;color: gray;">MRP $ <strike>5000</strike><span style="color: orangered;"> (62% OFF)</span></p>
+                <span style="color:TEAL;font-weight: bold;">INCLUSIVE OF ALL TAXES</span>
+                 <pre><h1 font-weight: bolder;>SELECT SIZE        <span style=" color:#ff3e6c;">SIZE CHART > </span></></pre>
+                    <span style="color: #ff3e6c;">Please Select a size</span>`
+                d1.innerText="S"  
+                d2.innerText="M"
+                d3.innerText="L"
+                d4.innerText="XL"
+                d5.innerText="XXL"
+
+                Wishbtn.innerText=" Wishlist ❤️"
+                Cartbtn.innerText="ADD TO BAG 👜 "
+
+                article.style.height="100%"
+                article.style.width="100%"
+                article.style.display="flex"
+                // article.style.flexDirection="column"
+                article.style.alignItems="center"
+                article.style.marginTop="100px"
+
+
+                div1.style.display="flex"
+                img.style.width="400px"
+                img.style.height="400px"
+                img.style.boxShadow="0px 7px 10px gray"
+                img1.style.height="400px"
+                img1.style.width="400px"
+                img1.style.marginLeft="10px"
+                img1.style.marginRight="30px"
+                img1.style.boxShadow="0px 7px 10px gray"
+
+                h1.style.fontSize="40px"
+                h1.style.textShadow="0px 4px 2px gray"
+
+                desc.style.color="gray"
+                
+                size.style.display="flex"
+                size.style.marginTop="-30px"
+                size.style.marginLeft="-20px"
+                
+
+                d1.style.width="50px"
+                d1.style.borderRadius="50%"
+                d1.style.border="1px solid gray"
+                d1.style.background="white"
+
+                d2.style.width="50px"
+                d2.style.borderRadius="50%"
+                d2.style.border="1px solid gray"
+                d2.style.background="white"
+
+                d3.style.width="50px"
+                d3.style.borderRadius="50%"
+                d3.style.border="1px solid gray"
+                d3.style.background="white"
+
+                d4.style.width="50px"
+                d4.style.borderRadius="50%"
+                d4.style.border="1px solid gray"
+                d4.style.background="white"
+
+                
+                d5.style.width="50px"
+                d5.style.borderRadius="50%"
+                d5.style.border="1px solid gray"  
+                d5.style.background="white"
+
+                Cartbtn.style.background="#ff3e6c"
+                Cartbtn.style.color="white"
+
+                Wishbtn.style.border="2px solid gray"
+                Wishbtn.style.background="white"
+
+                document.body.append(article)
+                article.append(div1,div2)
+                div1.append(img,img1)
+                div2.append(h1,desc,h2,price,p,size,Cartbtn,Wishbtn)
+                size.append(d1,d2,d3,d4,d5)
+            })
+            .catch((error)=>{console.log("error");})
+        }
+        fetchData()
+    </script>
+</body>
+
+</html>
